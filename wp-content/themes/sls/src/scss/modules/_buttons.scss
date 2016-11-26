@@ -1,0 +1,9 @@
+// edit per project, natch
+
+.btn,
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  @include button($primary-button);
+}

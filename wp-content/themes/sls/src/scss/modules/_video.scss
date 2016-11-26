@@ -1,0 +1,60 @@
+.video-buttons-wrapper {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.video-controls,
+.video-links {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba($black, 0.7);
+  border-radius: 4px;
+}
+
+.video-controls {
+  padding: 10px;
+
+  button {
+    background-color: transparent;
+    outline: none;
+
+    svg {
+      vertical-align: middle;
+      width: 35px;
+      height: 35px;
+      stroke: $white;
+    }
+  }
+}
+
+.video-back,
+.video-forward {
+  padding: 0;
+}
+
+.video-back svg {
+  transform: scaleX(-1);
+}
+
+.play-pause {
+  padding: 0 10px;
+
+  .play-icon {
+    display: none;
+  }
+
+  .pause-icon {
+    display: block;
+  }
+
+  &.is-paused {
+    .play-icon {
+      display: block;
+    }
+
+    .pause-icon {
+      display: none;
+    }
+  }
+}

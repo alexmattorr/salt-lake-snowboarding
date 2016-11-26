@@ -1,0 +1,16 @@
+// Max container based on $max-site-width:
+.max-container {
+  @include center($max-site-width);
+  position: relative;
+}
+
+// Responsive container
+.container {
+  @include center($desktop, $mobile-gutter);
+}
+
+//todo: generic layout templates
+
+hr {
+  @include rule();
+}

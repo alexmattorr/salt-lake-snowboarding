@@ -1,0 +1,169 @@
+// todo: make this awesome
+
+.select-box {
+  @include select-box();
+  width: rem(300px);
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 5%;
+
+  // input half
+  &.iw-half {
+    @include col(1/2, $gutter: 3);
+    height: 45px;
+  }
+
+  // input thirds
+  &.iw-third {
+    height: 45px;
+    @include col(1/3, $gutter: 3);
+  }
+
+  @include media('<tablet') {
+    &.iw-half,
+    &.iw-third {
+      @include stack();
+    }
+  }
+
+  // input full
+  &.iw-full {
+    @include cf();
+    @include span(1/1);
+    margin-bottom: 0;
+  }
+
+  // input:focus border
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid rgba($teal, 0);
+    pointer-events: none;
+    transition: border 350ms;
+  }
+
+  // Select Wrap
+  &.select-wrapper::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: border 350ms;
+  }
+
+  &.select-wrapper.is-active::after {
+    select {
+      border: none;
+    }
+  }
+
+  // active and invalid styles
+  &.is-active,
+  &.invalid {
+
+    &::after {
+      @include cf();
+      border: 3px solid $teal;
+    }
+
+    &.has-label label {
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // input:not([type='submit']):hover {
+  //   border: 1px solid $light-coal;
+
+  //   &::-webkit-input-placeholder {
+  //     color: rgba($light-coal, .75);
+  //   }
+
+  //   &:-moz-placeholder {
+  //     color: rgba($light-coal, .75);
+  //   }
+
+  //   &::-moz-placeholder {
+  //     color: rgba($light-coal, .75);
+  //   }
+
+  //   &:-ms-input-placeholder {
+  //     color: rgba($light-coal, .75);
+  //   }
+  // }
+
+  label {
+    font-family: Arial;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 6px;
+    font-size: 8px;
+    color: rgba(white, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 350ms;
+
+    // label text
+    &::before {
+      content: attr(data-content);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 3px;
+      right: -6px;
+      color: $white;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 350ms ease 75ms, transform 350ms ease 75ms;
+    }
+
+    // label bg
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      background: $teal;
+      opacity: 0;
+      transform: scale(.25);
+      transform-origin: top right;
+      transition: opacity 350ms, transform 350ms ease;
+    }
+  }
+}

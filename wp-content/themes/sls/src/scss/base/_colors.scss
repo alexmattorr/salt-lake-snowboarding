@@ -1,0 +1,34 @@
+// Colors by name
+//
+// NOTE:  Please do not reference these directly.
+//        For semantic purposes, please reference
+//        a color by its use name below.
+//
+// –––––––––––––––––––––––––––––––––––––––––––––––
+$white:     #fff;
+$black:     #000;
+$base-gray: #707f8c;
+$teal:      #46AAAA;
+
+// Colors by Use
+//
+// See example here: https://gist.github.com/dbox/e7b206a04d39598e32237b5f1317ef83
+//
+// –––––––––––––––––––––––––––––––––––––––––––––––
+
+// General
+$color-primary:   $color-primary;
+
+// Buttons
+$primary-button:  $color-primary;
+
+// Backgrounds
+
+// Typography
+$primary-text:    darken($base-gray, 15%);
+$primary-heading: darken($base-gray, 25%);
+
+// Interactive
+$primary-button:  $color-primary;
+
+// Borders
