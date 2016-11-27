@@ -35,8 +35,8 @@ h1, h2, h3, h4, h5, h6 {
 // See mixin fluid-type() in Knapsack
 
 // Sample:
-// h1 { @include fluid-type(36px, 56px, 420px, 1024px); }
-// h2 { @include fluid-type(36px, 48px, 420px, 1024px); }
+h1 { @include fluid-type(36px, 56px, 420px, 1024px); }
+h2 { @include fluid-type(36px, 48px, 420px, 1024px); }
 h3 { @include fluid-type(24px, 26px, 420px, 1024px); }
 h4 { @include fluid-type(20px, 22px, 420px, 1024px); }
 h5 { @include fluid-type(16px, 18px, 420px, 1024px); }

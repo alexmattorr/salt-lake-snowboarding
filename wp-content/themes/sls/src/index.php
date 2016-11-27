@@ -10,6 +10,13 @@
 ?>
 
 <div class="first-post"><a href="<?php the_permalink(); ?>">
+  <div class="cat-badge">
+    <?php
+      foreach((get_the_category()) as $category) {
+        echo $category->cat_name . ' ';
+      }
+    ?>
+  </div>
   <figure style="background-image: url(<?php echo $image; ?>);"></figure>
   <div class="post-info">
     <h4><?php the_title(); ?></h4>
@@ -30,6 +37,13 @@
 ?>
 
       <li class="post"><a href="<?php the_permalink(); ?>">
+        <div class="cat-badge">
+          <?php
+            foreach((get_the_category()) as $category) {
+              echo $category->cat_name . ' ';
+            }
+          ?>
+        </div>
         <figure style="background-image: url(<?php echo $image; ?>);"></figure>
 
         <div class="post-info">

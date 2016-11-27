@@ -6,6 +6,7 @@
 
 .first-post,
 .post {
+  position: relative;
   margin-bottom: 3%;
   border: 1px solid $border-gray;
   transition: box-shadow ease .3s;

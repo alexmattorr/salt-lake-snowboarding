@@ -1,0 +1,11 @@
+.cat-badge {
+  z-index: 99;
+  position: absolute;
+  padding: 5px;
+  top: 15px;
+  right: 15px;
+  background-color: $black;
+  color: $white;
+  font-family: $head-font;
+  text-transform: uppercase;
+}
