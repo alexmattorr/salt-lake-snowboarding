@@ -1,3 +1,7 @@
+body {
+  background-color: $base-gray;
+}
+
 // Max container based on $max-site-width:
 .max-container {
   @include center($max-site-width);
@@ -7,6 +11,8 @@
 // Responsive container
 .container {
   @include center($desktop, $mobile-gutter);
+  padding-top: 3%;
+  background-color: $white;
 }
 
 //todo: generic layout templates

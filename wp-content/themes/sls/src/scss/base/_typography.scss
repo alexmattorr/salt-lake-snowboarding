@@ -1,5 +1,7 @@
 // change per project
-$base-font: $sans;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Unica+One');
+$base-font: 'Source Sans Pro', sans-serif;
+$head-font: 'Unica One', cursive;
 
 body, p, a, h1, h2, h3, h4, h5, h6,
 small, em, strong, input, button {
@@ -14,7 +16,9 @@ small, em, strong, input, button {
 h1, h2, h3, h4, h5, h6 {
   display: block;
   margin: 1rem 0;
+  font-family: $head-font;
   font-weight: normal;
+  text-transform: uppercase;
   color: $primary-heading;
 
   &:first-child {
@@ -33,10 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 // Sample:
 // h1 { @include fluid-type(36px, 56px, 420px, 1024px); }
 // h2 { @include fluid-type(36px, 48px, 420px, 1024px); }
-// h3 { @include fluid-type(30px, 36px, 420px, 1024px); }
-// h4 { @include fluid-type(24px, 30px, 420px, 1024px); }
-// h5 { @include fluid-type(20px, 24px, 420px, 1024px); }
-// h6 { @include fluid-type(18px, 20px, 420px, 1024px); }
+h3 { @include fluid-type(24px, 26px, 420px, 1024px); }
+h4 { @include fluid-type(20px, 22px, 420px, 1024px); }
+h5 { @include fluid-type(16px, 18px, 420px, 1024px); }
+h6 { @include fluid-type(12px, 14px, 420px, 1024px); }
 
 
 // Letterspacing
