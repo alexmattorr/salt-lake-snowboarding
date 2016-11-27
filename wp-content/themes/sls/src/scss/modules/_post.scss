@@ -9,7 +9,7 @@
   position: relative;
   margin-bottom: 3%;
   border: 1px solid $border-gray;
-  transition: box-shadow ease .3s;
+  transition: all ease .3s;
 
   a {
     display: block;
@@ -23,6 +23,7 @@
   }
 
   &:hover {
+    transform: translateY(-10px);
     box-shadow: 0 8px 16px 0 rgba($black, 0.2);
 
     h4 {
